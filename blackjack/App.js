@@ -3,6 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
+import NavigationWrapper from './navigation/navigation-wrapper';
+import Profile from './Profile/screens/Profile'
+
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -26,9 +29,11 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+     <NavigationWrapper>
+       
+    </NavigationWrapper>
+
+     
   );
 }
 
@@ -39,5 +44,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });

@@ -9,7 +9,7 @@ export default function App() {
 
   useEffect(() => {
     loadFont();
-    console.log("[APP]: loading of fonts was succesful")
+    console.log("[APP]: loading of fonts was succesful");
   })
 
   const loadFont = async () => {

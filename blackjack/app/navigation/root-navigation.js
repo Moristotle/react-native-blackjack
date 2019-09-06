@@ -1,6 +1,6 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack'
-import Profile from '../Profile/screens/Profile';
+import Profile from '../profile/screens/Profile';
 //import TodoDetails from '../todos/screens/TodoDetails';
 
 

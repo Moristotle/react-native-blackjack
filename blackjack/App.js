@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
+import NavigationWrapper from './app/navigation/navigation-wrapper'; 
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -10,7 +11,7 @@ export default function App() {
   useEffect(() => {
     loadFont();
     console.log("[APP]: loading of fonts was succesful");
-  })
+  }, [])
 
   const loadFont = async () => {
     await Font.loadAsync({
@@ -20,15 +21,12 @@ export default function App() {
     });
     setLoading(false);
   }
-
   if (loading) {
     <AppLoading />
   }
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <NavigationWrapper></NavigationWrapper>
   );
 }
 

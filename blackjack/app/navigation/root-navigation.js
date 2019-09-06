@@ -2,12 +2,14 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack'
 import Profile from '../profile/screens/Profile';
 import Home from '../home/screens/Home';
+import LoginScreen from '../login/loginScreen';
+
 
 
 const MainNavigator = createStackNavigator({
     
-    /*login :{
-        screen: Login,
+    loginScreen :{
+        screen: LoginScreen,
         navigationOptions: () => ({
             title: 'Login'
         }),
@@ -19,7 +21,7 @@ const MainNavigator = createStackNavigator({
         headerTitleStyle: {
             fontWeight: 'bold',
         }
-    },*/
+    },
     home :{
         screen: Home,
         navigationOptions: () => ({

@@ -7,35 +7,30 @@ import { useObserver } from 'mobx-react-lite';
 export default function Profile(){
     const uri = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
     const profileStore = useContext(profileContext); //name, highscore, totalscore
-    const [profile, setProfile] = useState({
-        name: "Mathias Birkeland",
-        totalScore: 79,
-        highScore: 23
-    })
+
     return useObserver(() => (
-        <Container style={styles.profile}>
-            {/* <Header>
-            <Body>
-                <Text>Profile</Text>
-            </Body>
-            </Header> */}
+        <Container style={styles.container}>
                 <Thumbnail large source={{uri: uri}} />
-                <Text style={styles.name}>{profileStore.profile.name}</Text>
-                <Text>Total Score: {profileStore.profile.totalScore}</Text>
-                <Text>Highest Score: {profileStore.profile.highScore}</Text>
+                <Text style={styles.name}>{profileStore.profile.name}Hello</Text>
+                <Text style={styles.text}>Total Score: {profileStore.profile.totalScore}</Text>
+                <Text style={styles.text}>Highest Score: {profileStore.profile.highScore}</Text>
 
         </Container>
     ));
 }
 const styles = StyleSheet.create({
-    profile:{
+    container:{
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#505050',
         alignItems: 'center',
-        marginTop: 100
+        paddingTop: 100,
+        justifyContent: 'flex-start'
     },
     name:{
-        margin: 20,
         fontSize: 35,
+        color: 'white',
+    },
+    text: {
+        color: 'white',
     }
   });

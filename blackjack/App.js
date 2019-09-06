@@ -3,13 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
+import LoginScreen from './login/loginScreen'
 
 export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     loadFont();
-    console.log("[APP]: loading of fonts was succesful");
+    console.log("[APP]: loading of fonts was succesfull");
   })
 
   const loadFont = async () => {
@@ -26,9 +27,7 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <LoginScreen />
   );
 }
 

@@ -4,7 +4,6 @@ import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import NavigationWrapper from './app/navigation/navigation-wrapper'; 
-import LoginScreen from './login/loginScreen'
 
 export default function App() {
   const [loading, setLoading] = useState(true);

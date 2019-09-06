@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { } from 'native-base';
 import { StyleSheet, View, Text, Image, Alert  } from 'react-native';
-import Icon from './Icon';
 import Button from './customButton';
 import InputField from './InputField';
+import {useNavigation} from 'react-navigation-hooks';
+
 
 export default function LoginScreen() {
     const [loading, setLoading] = useState(true);
     const [name, setName] = useState('');
+    const {navigate} = useNavigation();
 
     useEffect(() => {
         console.log('This works!')
@@ -19,8 +21,7 @@ export default function LoginScreen() {
 
     const loginHandler = () => {
         setName('');
-        Alert.alert("Login", "Login was successfull!",
-        )
+        navigate('home');   
     }
     
 
@@ -31,7 +32,7 @@ export default function LoginScreen() {
             </View>
             
             <View style={styles.imageContainer}>
-                <Image style={styles.image}  source={require("../assets/react-icon.png")}/>
+                <Image style={styles.image}  source={require("../../assets/react-icon.png")}/>
             </View>
             <View style={styles.inputContainer}>
                 <InputField placeholder="Name" onChangeText={nameHandler} value={name} />

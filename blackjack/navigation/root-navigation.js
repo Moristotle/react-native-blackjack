@@ -1,7 +1,7 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack'
 import Profile from '../Profile/screens/Profile';
-//import TodoDetails from '../todos/screens/TodoDetails';
+import Home from '../Home/screens/Home';
 
 
 const MainNavigator = createStackNavigator({
@@ -10,25 +10,60 @@ const MainNavigator = createStackNavigator({
         screen: Login,
         navigationOptions: () => ({
             title: 'Login'
-        })
+        }),
+        headerStyle: {
+            backgroundColor: '#303030',
+            
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            fontWeight: 'bold',
+        }
     },*/
-    profile:{
-        screen: Profile,
-        navigationOptions: () => ({
-            title: 'Profile'
-        })
-    }/*,
     home :{
         screen: Home,
         navigationOptions: () => ({
-            title: 'Home'
-        })
+            title: 'Home',
+            headerStyle: {
+                backgroundColor: '#303030',
+                
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            }
+        }),
+        
+      
     },
+    profile:{
+        screen: Profile,
+        navigationOptions: () => ({
+            title: 'Profile',
+            headerStyle: {
+                backgroundColor: '#303030',
+                
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            }
+        })
+    }
+    /*,
     game :{
         screen: Game,
         navigationOptions: () => ({
             title: 'Game'
-        })
+        }),
+        headerStyle: {
+            backgroundColor: '#303030',
+            
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            fontWeight: 'bold',
+        }
     },*/
     
 })
